@@ -84,6 +84,7 @@ It can be accessed using:*/
 It can be accessed using: */
 /*const os = require('os') */
 // Note :
+// template string
 // Use of backtick char is same as single qoute
 // Use of ${} is used to add place holder for argumnet
 
