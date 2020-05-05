@@ -4,8 +4,13 @@
 // }
 // sayHi();
 
+function Hello(callback){
+    callback();
+}
+
 // Functional Expression
 let sayHello = function(){
     console.log("Hello Universe");
 }
-sayHello();
+Hello(sayHello);
+console.log("END");
