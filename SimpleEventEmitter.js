@@ -1,4 +1,19 @@
+// const EventEmitter = require("events");
+// const emitter = new EventEmitter();
+
+// emitter.on("click", function(){
+//     console.log("Hello World");
+// })
+
+// emitter.emit("click");
+
+// Result: Hello World
+
+
+
+// Practice
 const EventEmitter = require("events");
+
 const emitter = new EventEmitter();
 
 emitter.on("click", function(){
@@ -6,5 +21,3 @@ emitter.on("click", function(){
 })
 
 emitter.emit("click");
-
-// Result: Hello World
