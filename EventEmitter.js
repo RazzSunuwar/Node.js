@@ -54,6 +54,6 @@ people.forEach(function(person){
     });
 });
 
-James.emit("speak", "hey dudes");
+James.emit("speak", "hey dudes What are you doing ?");
 Bryan.emit("speak", "I am doing coding");
 Larry.emit("speak", "I am also doing coding");
