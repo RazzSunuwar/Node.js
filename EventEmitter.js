@@ -56,3 +56,4 @@ people.forEach(function(person){
 
 James.emit("speak", "hey dudes");
 Bryan.emit("speak", "I am doing coding");
+Larry.emit("speak", "I am also doing coding");
