@@ -30,3 +30,28 @@
 // });
 
 // James.emit('Speak', 'Hey dudes');   
+
+
+
+const events = require("events");
+const util = require("util");
+
+const Person = function(name){
+    this.name = name;
+}
+
+util.inherits(Person, events.EventEmitter);
+
+
+let James = new Person("James");
+let Bryan = new Person("Bryan");
+let Larry = new Person("Larry");
+const people = [James, Bryan, Larry];
+
+people.forEach(function(person){
+    person.on("speak", (msg) => {
+        console.log(person.name + " said:" + msg);
+    });
+});
+
+James.emit("speak", "hey dudes");
