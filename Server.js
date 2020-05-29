@@ -1,5 +1,6 @@
 const http = require('http');
 const server = http.createServer(function(req, res){
+    console.log('Request was made: ' +req.url);
     res.write('Hello World');
     res.end();
 });
