@@ -3,13 +3,16 @@ const http = require('http');
 const fs = require('fs');
 
 const myReadStream = fs.createReadStream(__dirname + '/README.md', 'utf8');
-const myWriteStream = fs.createWriteStream(__dirname + '/WriteMe.txt');
+const myWriteStream = fs.createWriteStream(__dirname + '/WriteFile.txt');
 
-myReadStream.on('data', function(chunk){
-    console.log('new chunk received:');
-    myWriteStream.write(chunk);
-});
+// Writeable Streams
+// myReadStream.on('data', function(chunk){
+//     console.log('new chunk received:');
+//     myWriteStream.write(chunk);
+// });
 
+
+myReadStream.pipe(myWriteStream);
 
 // const server = http.createServer(function(req, res){
 //     console.log('Request was made: ' +req.url);
