@@ -15,7 +15,7 @@ const fs = require('fs');
 // myReadStream.pipe(myWriteStream);
 
 const server = http.createServer(function(req, res){
-    console.log('Request was made: ' +req.url);
+    console.log('Request was made: ' + req.url);
     res.writeHead(200, {'Content-type': 'text/plain'});
     const myReadStream = fs.createReadStream(__dirname + '/README.md', 'utf8');
 
