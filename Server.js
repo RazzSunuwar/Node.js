@@ -16,10 +16,13 @@ const fs = require('fs');
 
 const server = http.createServer(function(req, res){
     console.log('Request was made: ' +req.url);
-    res.writeHead(200, {'Content-type': 'text/plain'});
-    const myReadStream = fs.createReadStream(__dirname + '/README.md', 'utf8');
-
-    myReadStream.pipe(res); 
+    res.writeHead(200, {'Content-Type': 'application/json'});
+    let myObject = {
+        name: 'Kevin',
+        job: 'Ninja',
+        age: 26
+    };
+    res.end(JSON.stringify(myObject));
 });
 
 server.listen(3000, function(err, done){
