@@ -1,0 +1,2 @@
+Hello ! Anonymous this is the practice file of NodeJS. NodeJS is the best run-time environment for
+JavaScript.
