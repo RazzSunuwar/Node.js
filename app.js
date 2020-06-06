@@ -12,6 +12,7 @@
 // console.log('Listening on port 8080...');
 
 const http = require('http');
+const Port = process.env.PORT || 8080;
 
 const Server = http.createServer((req, res) => {
     if (req.url === '/'){
@@ -25,9 +26,13 @@ const Server = http.createServer((req, res) => {
     }
 });
 
-Server.listen(8080);
+Server.listen(Port, (err, done) => {
+    if(err){
+        console.log(`Server listening error at port ${Port}`);
+    } return console.log(`Server listening on port ${Port}...`);
+});
 
-console.log('Listening on port 8080...');
+
 
 
 
