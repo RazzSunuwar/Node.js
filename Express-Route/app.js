@@ -14,7 +14,7 @@ app.get('/contact', function(req, res){
 });
 
 app.get('/profile/:name', function(req, res){
-    let data = {age: 29, job: 'Ninja'}
+    let data = {age: 29, job: 'Ninja', hobbies: ['eating', 'fighting', 'fishing']};
     res.render('profile', {person: req.params.name, data: data});
 });
 
@@ -23,4 +23,3 @@ app.listen(port, (err, done) => {
         console.log(`Server listening at port ${port} failed`)
     } return console.log(`Server listening at port ${port} success`)
 });
-
