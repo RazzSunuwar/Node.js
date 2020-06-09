@@ -4,6 +4,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app.set('view engine', 'ejs');
+app.use('/assests', express.static('stuff'));
 
 app.get('/', function(req, res){
     res.render('index');
