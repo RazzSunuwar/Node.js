@@ -1,5 +1,5 @@
 const express = require('express');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/contact', function(req, res){
-    res.render('contact');
+    res.render('contact', {qs: req.query});
 });
 
 app.get('/profile/:name', function(req, res){

@@ -1,5 +1,5 @@
 //  Create Web Server
-// const http = require('http');
+const http = require('http');
 
 // const Server = http.createServer();
 
@@ -11,7 +11,8 @@
 
 // console.log('Listening on port 8080...');
 
-const http = require('http');
+
+
 const Port = process.env.PORT || 8080;
 
 const Server = http.createServer((req, res) => {
