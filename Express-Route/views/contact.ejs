@@ -17,5 +17,16 @@
     <%- include ('partials/nav.ejs') -%>
     <h1>Contact Page</h1>
     <p>This is the practice Contact Pages</p>
+
+    <form id= "contact-form">
+        <label for = "who">Who do you want to Contact?</label>
+        <input type="text" name="who" value="<%= qs.person %>">
+        <label for="department">Which department?</label>
+        <input type="text" name="department" value="<%= qs.dept %>">
+        <label for="email">Your email</label>
+        <input type="email"  name="email" />
+        <input type="submit" value="submit" />
+
+    </form>
 </body>
 </html>
