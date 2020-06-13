@@ -37,7 +37,7 @@
 // Practice 3
 const EventEMitter = require("events");
 const emitter = new EventEMitter();
-emitter.on("click", function(){
+emitter.on("click", () => {
     console.log("Hello World!");
 });
 emitter.emit("click");
